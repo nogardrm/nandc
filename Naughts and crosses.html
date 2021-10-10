@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>
+  <button type="button" onclick="CLickMe(this, 0)">_</button>
+  <button type="button" onclick="CLickMe(this, 1)">_</button>
+  <button type="button" onclick="CLickMe(this, 2)">_</button>
+</p>
+<p>
+  <button type="button" onclick="CLickMe(this, 3)">_</button>
+  <button type="button" onclick="CLickMe(this, 4)">_</button>
+  <button type="button" onclick="CLickMe(this, 5)">_</button>
+</p>
+<p>
+  <button type="button" onclick="CLickMe(this, 6)">_</button>
+  <button type="button" onclick="CLickMe(this, 7)">_</button>
+  <button type="button" onclick="CLickMe(this, 8)">_</button>
+</p>
+
+
+<script>
+var player = 1
+var Sure = [0,0,0,0,0,0,0,0,0] 
+function CLickMe(me, po) {
+  if (Sure[po] == 0) {
+    if (player == 1) {
+      me.innerHTML = "O"
+    } else {
+      me.innerHTML = "X"
+    }
+    Sure[po] = player
+    player *= -1
+  }
+  check(Sure[0], Sure[1], Sure[2])
+  check(Sure[3], Sure[4], Sure[5])
+  check(Sure[6], Sure[7], Sure[8])
+  check(Sure[0], Sure[3], Sure[6])
+  check(Sure[1], Sure[4], Sure[7])
+  check(Sure[2], Sure[5], Sure[8])
+  check(Sure[0], Sure[4], Sure[8])
+  check(Sure[6], Sure[4], Sure[2])
+}
+function check(p1, p2, p3) {
+  if (p1 == p2 && p2 == p3) {
+    if (p1 == -1) {
+      alert("Player 2 wins")
+    } else if (p1 == 1) {
+      alert("player 1 wins")
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>
