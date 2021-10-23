@@ -1,57 +1,51 @@
-<!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSFiddle</title>
 
-<p>
-  <button type="button" onclick="CLickMe(this, 0)">_</button>
-  <button type="button" onclick="CLickMe(this, 1)">_</button>
-  <button type="button" onclick="CLickMe(this, 2)">_</button>
-</p>
-<p>
-  <button type="button" onclick="CLickMe(this, 3)">_</button>
-  <button type="button" onclick="CLickMe(this, 4)">_</button>
-  <button type="button" onclick="CLickMe(this, 5)">_</button>
-</p>
-<p>
-  <button type="button" onclick="CLickMe(this, 6)">_</button>
-  <button type="button" onclick="CLickMe(this, 7)">_</button>
-  <button type="button" onclick="CLickMe(this, 8)">_</button>
-</p>
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
 
+      <script type="text/javascript">
+        var height
+        var force_height = null
+        var slug = "47uy0w12"
+        var show_src = "//fiddle.jshell.net/owenewo/47uy0w12/81/show/light/"
+        var resize_element_counter = 0
+        var shell_edit_url = "/owenewo/47uy0w12/81/light/"
+      </script>
 
-<script>
-var player = 1
-var Sure = [0,0,0,0,0,0,0,0,0] 
-function CLickMe(me, po) {
-  if (Sure[po] == 0) {
-    if (player == 1) {
-      me.innerHTML = "O"
-    } else {
-      me.innerHTML = "X"
-    }
-    Sure[po] = player
-    player *= -1
-  }
-  check(Sure[0], Sure[1], Sure[2])
-  check(Sure[3], Sure[4], Sure[5])
-  check(Sure[6], Sure[7], Sure[8])
-  check(Sure[0], Sure[3], Sure[6])
-  check(Sure[1], Sure[4], Sure[7])
-  check(Sure[2], Sure[5], Sure[8])
-  check(Sure[0], Sure[4], Sure[8])
-  check(Sure[6], Sure[4], Sure[2])
-}
-function check(p1, p2, p3) {
-  if (p1 == p2 && p2 == p3) {
-    if (p1 == -1) {
-      alert("Player 2 wins")
-    } else if (p1 == 1) {
-      alert("player 1 wins")
-    }
-  }
-}
+      <script src="/js/embed/embed.js"></script>
+      <link rel="stylesheet" media="screen" href="/css/embed/embed-light.css" />
+      <link rel="icon" href="/img/favicon.png">
+  </head>
+  <body id="sylvester-standalone">
+    <a class="toEditor" href="//jsfiddle.net/owenewo/47uy0w12/81/" target="_blank">
+      <svg width='34' height='40'>
+      <use xlink:href='//jsfiddle.net/sprite.svg#logo'></use>
+    </svg>Edit in JSFiddle
+    </a>
 
-</script>
+    <div id="result">
+      <div id="click-to-run">
+        <div class="ctrCont">
+          <svg width='70' height='70'>
+      <use xlink:href='//jsfiddle.net/sprite.svg#embed-run'></use>
+    </svg>
+          <section>
+            <strong>Run this fiddle</strong>
+            <span>
+              Run code only from a trusted source.<br>
+              Don't fall for scams (crypto, Bitcoin, ETH, etc).
+            </span>
+          </section>
+        </div>
+      </div>
+    </div>
 
-</body>
+    
+  </body>
 </html>
